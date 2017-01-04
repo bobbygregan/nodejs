@@ -1,0 +1,16 @@
+{
+  "name": "livecodenode",
+  "version": "1.0.0",
+  "description": "UIT Live Code Project for Node.js and Express.js",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.14.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Rob Myers",
+  "license": "ISC"
+}
