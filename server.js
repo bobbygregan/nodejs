@@ -18,6 +18,8 @@
 var http = require('http');
 var express = require('express');
 // @TODO: <Problem 2> you should add the messages module here. 
+var msg = require('./messages');
+
 
 // initialize the app using express
 var app = express();
@@ -28,13 +30,22 @@ var app = express();
 app.get('/', function(req, res) {
 
 	// @TODO: <Problem 2> Update your hard coded text into the correct module object
-	res.write('If you see this, your route is working!'); // write something to standard output
+	res.write(msg.home);	// write something to standard output	
 	res.end();	// end the event
 });
 
 // @TODO: <Problem 1> you should add your new routes here. 
 // @PROTIP: remember to look at the route I provided above!
+app.get('/about', function(req, res) {
 
-// Initialize the app to listen on port 8080, and log some text to say so
-app.listen(8080);
-console.log("Listening on port 8080...");
+	// @TODO: <Problem 2> Update your hard coded text into the correct module object
+	res.write(msg.about); // write something to standard output
+	res.end();	// end the event
+});
+
+app.get('/contact', function(req, res) {
+
+	// @TODO: <Problem 2> Update your hard coded text into the correct module object
+	res.write(msg.contact); // write something to standard output
+	res.end();	// end the event
+});
